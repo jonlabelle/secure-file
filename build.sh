@@ -22,3 +22,8 @@ delete_dir_if_exists "secure-file/obj"
 
 dotnet restore
 dotnet publish secure-file -f netcoreapp2.0 -o ../build -c Release
+
+if [ -f "build/secure-file" ]; then
+    echo "Making 'build/secure-file' executable..."
+    chmod +x build/secure-file
+fi
