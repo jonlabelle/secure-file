@@ -1,8 +1,10 @@
 @echo off
 setlocal
 
-set PROJECT_ROOT="%~dp0"
+set DOTNET_SKIP_FIRST_TIME_EXPERIENCE=true
+set DOTNET_CLI_TELEMETRY_OPTOUT=1
 
+set PROJECT_ROOT="%~dp0"
 pushd %PROJECT_ROOT%
 
 if exist "build" (rmdir /s /q "build")

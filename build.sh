@@ -3,7 +3,11 @@
 set -e
 set -o pipefail
 
+export DOTNET_SKIP_FIRST_TIME_EXPERIENCE=true
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
+
 readonly PROJECT_ROOT="$(cd "$(dirname "${0}")"; echo "$(pwd)")"
+pushd "$PROJECT_ROOT"
 
 delete_dir_if_exists() {
     local dirpath="${1}"
@@ -13,8 +17,6 @@ delete_dir_if_exists() {
         rm -rf "$dirpath"
     fi
 }
-
-pushd "$PROJECT_ROOT"
 
 delete_dir_if_exists "build"
 delete_dir_if_exists "secure-file/bin"
