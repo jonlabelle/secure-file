@@ -1,0 +1,13 @@
+language: csharp
+mono: none
+
+# must be the dotnet core "sdk" version, not the dotnet core runtime
+dotnet: 2.2.103
+
+script:
+ - dotnet restore
+
+git:
+  depth: 3
+
+notifications: never
