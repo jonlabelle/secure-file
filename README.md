@@ -1,5 +1,7 @@
 # secure-file
 
+[![Travis CI Build Status](https://travis-ci.com/jonlabelle/secure-file.svg?branch=master)](https://travis-ci.com/jonlabelle/secure-file)
+
 A small command-line utility for encrypting/decrypting arbitrary files using Rijndael method.
 
 High-level scenario of using this utility in [AppVeyor CI](http://www.appveyor.com) environment:
